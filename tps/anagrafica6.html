@@ -12,10 +12,10 @@
                 person.mail=document.getElementById("mail").value;
                 person.cfiscale=document.getElementById("cfiscale").value;
 
-                const nomeregex="^[A-Za-zÀ-ÖØ-öø-ÿ' ]+$";
-                const capregex="^\d{5}$";
-                const mailregex="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$";
-                const cfiscregex="^[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]$";
+                const nomeregex=new RegExp("^[A-Za-zÀ-ÖØ-öø-ÿ' ]+$");
+                const capregex=new RegExp("^\d{5}$");
+                const mailregex=new RegExp("^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$");
+                const cfiscregex=new RegExp("^[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]$");
 
                 if (!nomeregex.test(person.nome)){
                     document.getElementById("messaggioNome").innerHtml="nome non valido";
@@ -62,4 +62,5 @@
     </body>
 
 </html>
+
 
