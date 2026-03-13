@@ -18,18 +18,28 @@
 
                 if (!nomeregex.test(person.nome)){
                     document.getElementById("messaggioNome").innerHTML="nome non valido";
+                }else{
+                    document.getElementById("messaggioNome").innerHTML="";
                 }
                 if (!nomeregex.test(person.cognome)){
                     document.getElementById("messaggioCognome").innerHTML="cognome non valido";
+                }else{
+                    document.getElementById("messaggioCognome").innerHTML="";
                 }
                 if (!capregex.test(person.cap)){
                     document.getElementById("messaggioCap").innerHTML="cap non valido";
+                }else{
+                    document.getElementById("messaggioCap").innerHTML="";
                 }
                 if (!mailregex.test(person.mail)){
                     document.getElementById("messaggioMail").innerHTML="e-mail non valida";
+                }else{
+                    document.getElementById("messaggioMail").innerHTML="";
                 }
                 if (!cfiscregex.test(person.cfiscale)){
                     document.getElementById("messaggioCfisc").innerHTML="codice fiscale non valido";
+                }else{
+                    document.getElementById("messaggioCfisc").innerHTML="";
                 }
             }
         </script>
@@ -62,6 +72,7 @@
     </body>
 
 </html>
+
 
 
 
