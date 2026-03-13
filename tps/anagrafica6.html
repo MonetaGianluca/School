@@ -17,21 +17,20 @@
                 const cfiscregex = /^[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]$/;
 
                 if (!nomeregex.test(person.nome)){
-                    document.getElementById("messaggioNome").innerHtml="nome non valido";
+                    document.getElementById("messaggioNome").innerHTML="nome non valido";
                 }
                 if (!nomeregex.test(person.cognome)){
-                    document.getElementById("messaggioCognome").innerHtml="cognome non valido";
+                    document.getElementById("messaggioCognome").innerHTML="cognome non valido";
                 }
                 if (!capregex.test(person.cap)){
-                    document.getElementById("messaggioCap").innerHtml="cap non valido";
+                    document.getElementById("messaggioCap").innerHTML="cap non valido";
                 }
                 if (!mailregex.test(person.mail)){
-                    document.getElementById("messaggioMail").innerHtml="e-mail non valida";
+                    document.getElementById("messaggioMail").innerHTML="e-mail non valida";
                 }
                 if (!cfiscregex.test(person.cfiscale)){
-                    document.getElementById("messaggioCfisc").innerHtml="codice fiscale non valido";
+                    document.getElementById("messaggioCfisc").innerHTML="codice fiscale non valido";
                 }
-                
             }
         </script>
     </head>
@@ -63,6 +62,7 @@
     </body>
 
 </html>
+
 
 
 
