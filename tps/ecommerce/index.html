@@ -72,6 +72,23 @@
                         
                             // Salva
                             localStorage.setItem("carrello", JSON.stringify(carrello));
+
+                            // Animazione bottone
+                            
+                            bottone.classList.add("btnAggiunto");
+                            bottone.classList.add("animazioneCarrello");
+                            
+                            bottone.textContent = "Aggiunto ✓";
+                            
+                            // Ripristina dopo 1 secondo
+                            setTimeout(() => {
+                            
+                                bottone.classList.remove("btnAggiunto");
+                                bottone.classList.remove("animazioneCarrello");
+                            
+                                bottone.textContent = "Aggiungi al carrello";
+                            
+                            }, 1000);
                         
                         });
                         sezioneProdotti.appendChild(box);
