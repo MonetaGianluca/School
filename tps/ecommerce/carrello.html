@@ -14,7 +14,7 @@
             <a href="./registrazione.html">registrazione</a>
         </div>
         <div id="sezioneCarrello"></div>
-    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
         <script>
             const sezioneCarrello = document.getElementById("sezioneCarrello");
             // Recupera prodotti
@@ -56,6 +56,11 @@
                 Totale: € ${totale.toFixed(2)}
             `;
             sezioneCarrello.appendChild(totaleBox);
+            const checkoutBtn = document.createElement("button");
+            checkoutBtn.classList.add("checkoutBtn");
+            checkoutBtn.textContent = "Checkout";
+            checkoutBtn.addEventListener("click", generaPDF);
+            sezioneCarrello.appendChild(checkoutBtn);
             // Rimuove prodotto
             function rimuoviProdotto(indice){
                 carrello.splice(indice, 1);
@@ -64,6 +69,60 @@
                     JSON.stringify(carrello)
                 );
                 location.reload();
+            }
+            function generaPDF(){
+                const { jsPDF } = window.jspdf;
+                const doc = new jsPDF();
+                // Titolo
+                doc.setFontSize(22);
+                doc.text("Ricevuta FireZero", 20, 20);
+                doc.setFontSize(12);
+                let y = 40;
+                let totale = 0;
+                // Prodotti
+                carrello.forEach((prodotto, index) => {
+                    doc.text(
+                        `${index + 1}. ${prodotto.nome}`,
+                        20,
+                        y
+                    );
+                    y += 8;
+                    doc.text(
+                        `Marca: ${prodotto.marca}`,
+                        25,
+                        y
+                    );
+                    y += 8;
+                    doc.text(
+                        `Prezzo: € ${prodotto.prezzo}`,
+                        25,
+                        y
+                    );
+                    y += 15;
+                    totale += parseFloat(prodotto.prezzo);
+                });
+                // Totale
+                doc.setFontSize(18);
+                doc.text(
+                    `Totale: € ${totale.toFixed(2)}`,
+                    20,
+                    y + 10
+                );
+                // Data
+                doc.setFontSize(11);
+                doc.text(
+                    `Data: ${new Date().toLocaleDateString()}`,
+                    20,
+                    y + 25
+                );
+                // Download PDF
+                doc.save("ricevuta_firezero.pdf");
+                // Svuota carrello
+                localStorage.removeItem("carrello");
+                // Aggiorna pagina
+                setTimeout(() => {
+                    location.reload();
+                }, 500)
             }
         </script>
         
