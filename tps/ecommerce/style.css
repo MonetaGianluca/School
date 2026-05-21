@@ -86,108 +86,133 @@ body {
     #sezioneProdotti {
         padding: 20px;
     }
-}
-/* Contenitore sezione login */
-#sezioneLogin {
+}/* CONTENITORE LOGIN */
+#sezioneLogin{
+    width: 100%;
+    min-height: calc(100vh - 80px);
+
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 90px);
-    padding: 20px;
+
+    padding: 40px 20px;
 }
 
-/* Form registrazione */
-#formRegistrazione {
-    width: 100%;
-    max-width: 420px;
-    background: rgba(0, 0, 0, 0.35);
-    backdrop-filter: blur(8px);
-    border: 2px solid rgba(255, 80, 80, 0.4);
-    border-radius: 15px;
+/* FORM */
+#formRegistrazione{
+    width: 420px;
+
+    background-color: rgba(0,0,0,0.45);
+
+    border: 2px solid #ff1a1a;
+
+    border-radius: 20px;
+
     padding: 35px;
+
     box-shadow:
-        0 0 15px rgba(255, 0, 0, 0.4),
-        0 0 35px rgba(255, 50, 50, 0.2);
+        0 0 20px rgba(255,0,0,0.5),
+        0 0 40px rgba(255,0,0,0.2);
+
+    backdrop-filter: blur(5px);
 }
 
-/* Titolo */
-#formRegistrazione h2 {
+/* TITOLO */
+#formRegistrazione h2{
     text-align: center;
-    margin-bottom: 25px;
-    font-size: 30px;
-    color: #fff;
-    text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+    margin-bottom: 30px;
+
+    font-size: 32px;
+
+    color: white;
+
+    text-shadow: 0 0 10px red;
 }
 
-/* Label */
-#formRegistrazione label {
+/* LABEL */
+#formRegistrazione label{
     display: block;
-    margin-bottom: 6px;
+
     margin-top: 15px;
-    font-weight: bold;
+    margin-bottom: 8px;
+
     color: #ffd6d6;
-}
 
-/* Input */
-#formRegistrazione input {
-    width: 100%;
-    padding: 12px;
-    border: 2px solid transparent;
-    border-radius: 8px;
-    outline: none;
-    background-color: rgba(255,255,255,0.1);
-    color: white;
-    font-size: 15px;
-    transition: 0.3s;
-}
-
-/* Placeholder */
-#formRegistrazione input::placeholder {
-    color: rgba(255,255,255,0.6);
-}
-
-/* Focus input */
-#formRegistrazione input:focus {
-    border-color: #ff4d4d;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
-}
-
-/* Bottone */
-#formRegistrazione button {
-    width: 100%;
-    margin-top: 25px;
-    padding: 14px;
-    border: none;
-    border-radius: 8px;
-    background: linear-gradient(90deg, #ff1a1a, #b30000);
-    color: white;
-    font-size: 16px;
     font-weight: bold;
-    cursor: pointer;
+}
+
+/* INPUT */
+#formRegistrazione input{
+    width: 100%;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    border: 2px solid transparent;
+
+    background-color: rgba(255,255,255,0.1);
+
+    color: white;
+
+    font-size: 15px;
+
     transition: 0.3s;
 }
 
-/* Hover bottone */
-#formRegistrazione button:hover {
+/* PLACEHOLDER */
+#formRegistrazione input::placeholder{
+    color: rgba(255,255,255,0.5);
+}
+
+/* FOCUS */
+#formRegistrazione input:focus{
+    outline: none;
+
+    border-color: #ff4d4d;
+
+    box-shadow: 0 0 12px rgba(255,0,0,0.8);
+}
+
+/* BOTTONE */
+#formRegistrazione button{
+    width: 100%;
+
+    margin-top: 30px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: linear-gradient(90deg,#ff1a1a,#8b0000);
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* HOVER */
+#formRegistrazione button:hover{
     transform: scale(1.03);
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+
+    box-shadow: 0 0 15px rgba(255,0,0,0.8);
 }
 
-/* Errori */
-.errore {
+/* ERRORI */
+.errore{
     display: block;
-    margin-top: 5px;
+
     color: #ffb3b3;
+
     font-size: 13px;
-}
 
-/* Responsive */
-@media (max-width: 500px) {
-    #formRegistrazione {
-        padding: 25px;
-    }
-
-    #formRegistrazione h2 {
-        font-size: 24px;
-    }
+    margin-top: 5px;
 }
