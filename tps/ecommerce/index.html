@@ -49,8 +49,33 @@
                             <div class="prezzo">
                                 € ${prezzo}
                             </div>
-                            <button>Aggiungi al carrello</button>
+                            <button class="btnCarrello">Aggiungi al carrello</button>
                         `;
+                        const bottone = box.querySelector(".btnCarrello");
+
+                        bottone.addEventListener("click", () => {
+                        
+                            const prodotto = {
+                                nome,
+                                marca,
+                                descrizione,
+                                immagine,
+                                prezzo,
+                                taglia
+                            };
+                        
+                            // Recupera carrello
+                            let carrello = JSON.parse(localStorage.getItem("carrello")) || [];
+                        
+                            // Aggiunge prodotto
+                            carrello.push(prodotto);
+                        
+                            // Salva
+                            localStorage.setItem("carrello", JSON.stringify(carrello));
+                        
+                            alert("Prodotto aggiunto al carrello!");
+                        
+                        });
                         sezioneProdotti.appendChild(box);
                     });
                 });
