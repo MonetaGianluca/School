@@ -28,7 +28,7 @@
                         const nome = dati[0];
                         const marca = dati[1];
                         const descrizione = dati[2];
-                        const immagine = dati[3];
+                        const immagine = dati[3].trim();
                         const prezzo = dati[4];
                         const dimensioni = dati[5];
                         const taglia = dati[6];
@@ -38,7 +38,7 @@
                         const box = document.createElement("div");
                         box.classList.add("boxProdotto");
                         box.innerHTML = `
-                            <img src="${immagine}" alt="${nome}">
+                            <img src="${immagine}" alt="${nome}" onerror="this.src='https://via.placeholder.com/300'">
                             <h2>${nome}</h2>
                             <h3>${marca}</h3>
                             <p>${descrizione}</p>
