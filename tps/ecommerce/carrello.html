@@ -1,71 +1,71 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>E-Commerce Carrello</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div id="barraMenu">
-        <div id="logoSito">
-            <img src="./LogoFireZero.png" alt="">
-            <span class="nomeSito">FireZero</span>
+    <head>
+        <title>E-Commerce Carrello</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="barraMenu">
+            <div id="logoSito">
+                <img src="./LogoFireZero.png" alt="">
+                <span class="nomeSito">FireZero</span>
+            </div>
+            <a href="./index.html">home</a>
+            <a href="./registrazione.html">registrazione</a>
         </div>
-        <a href="./index.html">home</a>
-        <a href="./registrazione.html">registrazione</a>
-    </div>
-    <div id="sezioneCarrello"></div>
-
-    <script>
-        const sezioneCarrello = document.getElementById("sezioneCarrello");
-        // Recupera prodotti
-        let carrello = JSON.parse(localStorage.getItem("carrello")) || [];
-        // Carrello vuoto
-        if(carrello.length === 0){
-            sezioneCarrello.innerHTML = `
-                <h2 class="carrelloVuoto">
-                    Il carrello è vuoto
-                </h2>
-            `;
-        }
-        let totale = 0;
-        // Genera prodotti
-        carrello.forEach((prodotto, indice) => {
-            totale += parseFloat(prodotto.prezzo);
-            const box = document.createElement("div");
-            box.classList.add("boxCarrello");
-            box.innerHTML = `
-                <img src="${prodotto.immagine}">
-                <div class="infoCarrello">
-                    <h2>${prodotto.nome}</h2>
-                    <h3>${prodotto.marca}</h3>
-                    <p>${prodotto.descrizione}</p>
-                    <div class="prezzoCarrello">
-                        € ${prodotto.prezzo}
-                    </div>
-                    <button onclick="rimuoviProdotto(${indice})">
-                        Rimuovi
-                    </button>
-                </div>
-            `;
-            sezioneCarrello.appendChild(box);
-        });
-        // Totale
-        const totaleBox = document.createElement("div");
-        totaleBox.classList.add("totaleCarrello");
-        totaleBox.innerHTML = `
-            Totale: € ${totale.toFixed(2)}
-        `;
-        sezioneCarrello.appendChild(totaleBox);
-        // Rimuove prodotto
-        function rimuoviProdotto(indice){
-            carrello.splice(indice, 1);
-            localStorage.setItem(
-                "carrello",
-                JSON.stringify(carrello)
-            );
-            location.reload();
-        }
-    </script>
+        <div id="sezioneCarrello"></div>
     
-</body>
+        <script>
+            const sezioneCarrello = document.getElementById("sezioneCarrello");
+            // Recupera prodotti
+            let carrello = JSON.parse(localStorage.getItem("carrello")) || [];
+            // Carrello vuoto
+            if(carrello.length === 0){
+                sezioneCarrello.innerHTML = `
+                    <h2 class="carrelloVuoto">
+                        Il carrello è vuoto
+                    </h2>
+                `;
+            }
+            let totale = 0;
+            // Genera prodotti
+            carrello.forEach((prodotto, indice) => {
+                totale += parseFloat(prodotto.prezzo);
+                const box = document.createElement("div");
+                box.classList.add("boxCarrello");
+                box.innerHTML = `
+                    <img src="${prodotto.immagine}">
+                    <div class="infoCarrello">
+                        <h2>${prodotto.nome}</h2>
+                        <h3>${prodotto.marca}</h3>
+                        <p>${prodotto.descrizione}</p>
+                        <div class="prezzoCarrello">
+                            € ${prodotto.prezzo}
+                        </div>
+                        <button onclick="rimuoviProdotto(${indice})">
+                            Rimuovi
+                        </button>
+                    </div>
+                `;
+                sezioneCarrello.appendChild(box);
+            });
+            // Totale
+            const totaleBox = document.createElement("div");
+            totaleBox.classList.add("totaleCarrello");
+            totaleBox.innerHTML = `
+                Totale: € ${totale.toFixed(2)}
+            `;
+            sezioneCarrello.appendChild(totaleBox);
+            // Rimuove prodotto
+            function rimuoviProdotto(indice){
+                carrello.splice(indice, 1);
+                localStorage.setItem(
+                    "carrello",
+                    JSON.stringify(carrello)
+                );
+                location.reload();
+            }
+        </script>
+        
+    </body>
 </html>
