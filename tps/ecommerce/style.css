@@ -395,74 +395,50 @@ body {
 /* Animazione aggiunta carrello */
 
 .btnAggiunto{
-
     background: linear-gradient(90deg,#00b300,#008000) !important;
-
     transform: scale(1.05);
-
     box-shadow:
         0 0 15px rgba(0,255,0,0.7);
-
     transition: 0.3s;
 }
-
-
 /* Effetto pulse */
 
 @keyframes pulse{
-
     0%{
         transform: scale(1);
     }
-
     50%{
         transform: scale(1.08);
     }
-
     100%{
         transform: scale(1);
     }
 }
 
 .animazioneCarrello{
-
     animation: pulse 0.4s ease;
 }
 
 .checkoutBtn{
-
     width: 300px;
-
     align-self: flex-end;
-
     padding: 16px;
-
     border: none;
-
     border-radius: 12px;
-
     background: linear-gradient(
         90deg,
         #00cc66,
         #00994d
     );
-
     color: white;
-
     font-size: 18px;
-
     font-weight: bold;
-
     cursor: pointer;
-
     transition: 0.3s;
 }
 
 
 .checkoutBtn:hover{
-
     transform: scale(1.03);
-
-    box-shadow:
-        0 0 20px rgba(0,255,120,0.5);
+    box-shadow: 0 0 20px rgba(0,255,120,0.5);
 }
