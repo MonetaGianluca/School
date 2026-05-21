@@ -419,12 +419,17 @@ body {
     animation: pulse 0.4s ease;
 }
 
+/* =========================
+   CHECKOUT BUTTON
+========================= */
+
 .checkoutBtn{
     width: 300px;
     align-self: flex-end;
+    margin-top: 20px;
     padding: 16px;
     border: none;
-    border-radius: 12px;
+    border-radius: 14px;
     background: linear-gradient(
         90deg,
         #00cc66,
@@ -435,10 +440,22 @@ body {
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
+    box-shadow:
+        0 0 15px rgba(0,255,120,0.2);
 }
 
 
+/* HOVER */
+
 .checkoutBtn:hover{
     transform: scale(1.03);
-    box-shadow: 0 0 20px rgba(0,255,120,0.5);
+    box-shadow:
+        0 0 20px rgba(0,255,120,0.6);
+}
+/* MOBILE */
+@media(max-width:900px){
+    .checkoutBtn{
+        width: 100%;
+        align-self: center;
+    }
 }
