@@ -391,3 +391,40 @@ body {
     margin-top: 100px;
     font-size: 40px;
 }
+
+/* Animazione aggiunta carrello */
+
+.btnAggiunto{
+
+    background: linear-gradient(90deg,#00b300,#008000) !important;
+
+    transform: scale(1.05);
+
+    box-shadow:
+        0 0 15px rgba(0,255,0,0.7);
+
+    transition: 0.3s;
+}
+
+
+/* Effetto pulse */
+
+@keyframes pulse{
+
+    0%{
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(1.08);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+.animazioneCarrello{
+
+    animation: pulse 0.4s ease;
+}
