@@ -1,11 +1,11 @@
 nome,marca,descrizione,linkImmagine,prezzo,dimensioni,taglia,giorniSpedizione
-Estintore a Polvere ABC 6kg,Gloria,Estintore portatile a polvere per incendi classe A B C,,54.99,55x18 cm,6kg,3
-Estintore CO2 5kg,Bavaria,Estintore ad anidride carbonica ideale per quadri elettrici,,119.99,70x14 cm,5kg,4
-Idrante a Muro UNI45,Riello Fire,Idrante antincendio completo di lancia e manichetta UNI45,,189.90,65x55 cm,UNI45,5
-Manichetta Antincendio UNI45,Leader,Hose antincendio certificata EN14540 per idranti UNI45,,79.50,20 metri,UNI45,2
-Rilevatore di Fumo Smart,X-Sense,Sensore ottico di fumo con allarme sonoro integrato,,29.99,12x12 cm,Standard,2
-Coperta Antifiamma 120x180,Smartwares,Coperta ignifuga per incendi domestici e cucina,,18.90,120x180 cm,Standard,1
-Pulsante Manuale Antincendio,Notifier,Pulsante di allarme manuale rosso per impianti antincendio,,34.90,9x9 cm,Standard,3
-Lancia Antincendio UNI45,Pok,Lancia professionale regolabile per idranti UNI45,,67.00,25x8 cm,UNI45,4
-Estintore Schiuma 9L,Ceasefire,Estintore a schiuma per incendi classe A e B,,94.99,60x22 cm,9L,3
-Armadio Antincendio per Estintore,Metalnova,Armadio metallico rosso per contenimento estintore,,129.00,70x30 cm,Universale,6
+Estintore a Polvere ABC 6kg,Gloria,Estintore portatile a polvere per incendi classe A B C,https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=600,54.99,55x18 cm,6kg,3
+Estintore CO2 5kg,Bavaria,Estintore ad anidride carbonica ideale per quadri elettrici,https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600,119.99,70x14 cm,5kg,4
+Idrante a Muro UNI45,Riello Fire,Idrante antincendio completo di lancia e manichetta,https://upload.wikimedia.org/wikipedia/commons/8/8e/Fire_hydrant.jpg,189.90,65x55 cm,UNI45,5
+Manichetta Antincendio UNI45,Leader,Tubo antincendio professionale per idranti,https://upload.wikimedia.org/wikipedia/commons/3/3e/Fire_hose.jpg,79.50,20 metri,UNI45,2
+Rilevatore di Fumo Smart,X-Sense,Sensore di fumo con allarme integrato,https://images.unsplash.com/photo-1582719478185-2f1f8b6b6d4c?auto=format&fit=crop&w=600,29.99,12x12 cm,Standard,2
+Coperta Antifiamma 120x180,Smartwares,Coperta ignifuga per spegnere piccoli incendi,https://upload.wikimedia.org/wikipedia/commons/2/2b/Fire_blanket.jpg,18.90,120x180 cm,Standard,1
+Pulsante Manuale Antincendio,Notifier,Pulsante rosso di allarme incendio manuale,https://upload.wikimedia.org/wikipedia/commons/5/5c/Fire_alarm_button.jpg,34.90,9x9 cm,Standard,3
+Lancia Antincendio UNI45,Pok,Lancia regolabile per idranti antincendio,https://upload.wikimedia.org/wikipedia/commons/4/4b/Fire_nozzle.jpg,67.00,25x8 cm,UNI45,4
+Estintore Schiuma 9L,Ceasefire,Estintore a schiuma per incendi classe A e B,https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600,94.99,60x22 cm,9L,3
+Armadio Antincendio per Estintore,Metalnova,Armadio metallico rosso per estintore,https://images.unsplash.com/photo-1586864387967-d02ef85d4e9c?auto=format&fit=crop&w=600,129.00,70x30 cm,Universale,6
