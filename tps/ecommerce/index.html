@@ -1,18 +1,59 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>E-Commerce</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div id="barraMenu">
-        <div id="logoSito">
-            <img src="./LogoFireZero.png" alt="">
-            <span class="nomeSito">FireZero</span>
+    <head>
+        <title>E-Commerce</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="barraMenu">
+            <div id="logoSito">
+                <img src="./LogoFireZero.png" alt="">
+                <span class="nomeSito">FireZero</span>
+            </div>
+            <a href="./registrazione.html">registrazione</a>
+            <a href="./carrello.html">carrello</a>
         </div>
-        <a href="./registrazione.html">registrazione</a>
-        <a href="./carrello.html">carrello</a>
-    </div>
-    <div id="sezioneProdotti"></div>
-</body>
+        <div id="sezioneProdotti"></div>
+    
+        <script>
+            const sezioneProdotti = document.getElementById("sezioneProdotti");
+            fetch("prodotti.csv")
+                .then(response => response.text())
+                .then(csv => {
+                    const righe = csv.trim().split("\n");
+                    // Rimuove intestazione
+                    righe.shift();
+                    righe.forEach(riga => {
+                        const dati = riga.split(",");
+                        const nome = dati[0];
+                        const marca = dati[1];
+                        const descrizione = dati[2];
+                        const immagine = dati[3];
+                        const prezzo = dati[4];
+                        const dimensioni = dati[5];
+                        const taglia = dati[6];
+                        const spedizione = dati[7];
+    
+                        // Creazione box
+                        const box = document.createElement("div");
+                        box.classList.add("boxProdotto");
+                        box.innerHTML = `
+                            <img src="${immagine}" alt="${nome}">
+                            <h2>${nome}</h2>
+                            <h3>${marca}</h3>
+                            <p>${descrizione}</p>
+                            <div class="infoProdotto">
+                                <span>Taglia: ${taglia}</span>
+                                <span>${spedizione} giorni</span>
+                            </div>
+                            <div class="prezzo">
+                                € ${prezzo}
+                            </div>
+                            <button>Aggiungi al carrello</button>
+                        `;
+                        sezioneProdotti.appendChild(box);
+                    });
+                });
+        </script>
+    </body>
 </html>
